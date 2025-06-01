@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosenjit Roy - Bioinformatics Research Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #161b22 0%, #21262d 30%, #30363d 60%, #484f58 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 1px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(255,255,255,0.03) 20px
+            );
+            animation: float 25s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px) translateY(-100px); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        .profile-section {
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #21262d, #30363d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            font-weight: bold;
+            color: #ffffff;
+            box-shadow: 0 0 40px rgba(255,255,255,0.2);
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%23f6f8fa" stroke="%23d0d7de" stroke-width="2"/><circle cx="35" cy="35" r="8" fill="%23656d76"/><circle cx="65" cy="35" r="8" fill="%23656d76"/><path d="M25 65 Q50 85 75 65" stroke="%23656d76" stroke-width="3" fill="none"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8b949e;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 10px 18px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 22px;
+            min-width: 130px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Individual social link colors - GitHub theme */
+        .social-link:nth-child(1) {
+            background: linear-gradient(135deg, rgba(33, 38, 45, 0.6), rgba(33, 38, 45, 0.3));
+            border-color: rgba(139, 148, 158, 0.4);
+        }
+
+        .social-link:nth-child(1):hover {
+            background: linear-gradient(135deg, rgba(33, 38, 45, 0.8), rgba(33, 38, 45, 0.5));
+            border-color: rgba(139, 148, 158, 0.8);
+            box-shadow: 0 15px 35px rgba(33, 38, 45, 0.4);
+        }
+
+        .social-link:nth-child(2) {
+            background: linear-gradient(135deg, rgba(48, 54, 61, 0.6), rgba(48, 54, 61, 0.3));
+            border-color: rgba(139, 148, 158, 0.4);
+        }
+
+        .social-link:nth-child(2):hover {
+            background: linear-gradient(135deg, rgba(48, 54, 61, 0.8), rgba(48, 54, 61, 0.5));
+            border-color: rgba(139, 148, 158, 0.8);
+            box-shadow: 0 15px 35px rgba(48, 54, 61, 0.4);
+        }
+
+        .social-link:nth-child(3) {
+            background: linear-gradient(135deg, rgba(72, 79, 88, 0.6), rgba(72, 79, 88, 0.3));
+            border-color: rgba(139, 148, 158, 0.4);
+        }
+
+        .social-link:nth-child(3):hover {
+            background: linear-gradient(135deg, rgba(72, 79, 88, 0.8), rgba(72, 79, 88, 0.5));
+            border-color: rgba(139, 148, 158, 0.8);
+            box-shadow: 0 15px 35px rgba(72, 79, 88, 0.4);
+        }
+
+        .social-link:nth-child(4) {
+            background: linear-gradient(135deg, rgba(87, 96, 106, 0.6), rgba(87, 96, 106, 0.3));
+            border-color: rgba(139, 148, 158, 0.4);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: linear-gradient(135deg, rgba(87, 96, 106, 0.8), rgba(87, 96, 106, 0.5));
+            border-color: rgba(139, 148, 158, 0.8);
+            box-shadow: 0 15px 35px rgba(87, 96, 106, 0.4);
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .social-icon {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .social-link span:last-child {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #161b22;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid #30363d;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #f0f6fc;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-weight: 500;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #21262d;
+        }
+
+        section:nth-child(even) {
+            background: #0d1117;
+        }
+
+        section:nth-child(odd) {
+            background: #161b22;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            color: #f0f6fc;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b949e, #f0f6fc);
+        }
+
+        /* Summary */
+        .summary-content {
+            font-size: 1.15rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #c9d1d9;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Experience */
+        .experience-item {
+            background: #21262d;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #8b949e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #30363d;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border-left-color: #f0f6fc;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f0f6fc;
+        }
+
+        .experience-date {
+            color: #8b949e;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .experience-company {
+            color: #c9d1d9;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .experience-description {
+            color: #c9d1d9;
+        }
+
+        .experience-description ul {
+            margin-left: 20px;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+        }
+
+        /* Education */
+        .education-item {
+            background: #21262d;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #8b949e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #30363d;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .education-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #f0f6fc;
+        }
+
+        .education-date {
+            color: #8b949e;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .education-institution {
+            color: #c9d1d9;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .education-grade {
+            color: #f0f6fc;
+            font-weight: 600;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: #21262d;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #30363d;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #f0f6fc;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #30363d, #484f58);
+            color: #f0f6fc;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid #8b949e;
+        }
+
+        /* Projects & Publications */
+        .projects-grid, .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .project-item, .publication-item {
+            background: #21262d;
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #30363d;
+        }
+
+        .project-item:hover, .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-item h3, .publication-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #f0f6fc;
+        }
+
+        .project-item p, .publication-item p {
+            color: #c9d1d9;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #30363d;
+            color: #8b949e;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid #484f58;
+        }
+
+        /* Achievements */
+        .achievement-item {
+            background: #21262d;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .achievement-item h3 {
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+
+        .achievement-item p {
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #161b22 0%, #21262d 50%, #30363d 100%);
+            padding: 40px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #8b949e;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s ease;
+            background: rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .footer-link:hover::before {
+            left: 100%;
+        }
+
+        .footer-link:hover {
+            color: #f0f6fc;
+            border-color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-info {
+            color: #8b949e;
+            margin-top: 20px;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .social-links {
+                gap: 15px;
+                margin-top: 30px;
+            }
+
+            .social-link {
+                padding: 18px;
+                font-size: 0.8rem;
+                min-width: 110px;
+            }
+
+            .social-icon {
+                font-size: 1.8rem;
+            }
+
+            .nav-container {
+                gap: 20px;
+            }
+
+            .experience-header, .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-image">PR</div>
+                <h1>Prosenjit Roy</h1>
+                <p class="subtitle">Bioinformatics Research Specialist & Machine Learning Expert</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>prosenjit.roy.ontor@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>(979) 661-6591</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Prairie View, TX</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/prosenjit-roy" target="_blank" class="social-link" title="LinkedIn Profile">
+                        <span class="social-icon">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/prosenjit-roy" target="_blank" class="social-link" title="GitHub Profile">
+                        <span class="social-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=prosenjit-roy" target="_blank" class="social-link" title="Google Scholar">
+                        <span class="social-icon">🎓</span>
+                        <span>Scholar</span>
+                    </a>
+                    <a href="https://orcid.org/prosenjit-roy" target="_blank" class="social-link" title="ORCID Profile">
+                        <span class="social-icon">🔬</span>
+                        <span>ORCID</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#summary" class="nav-link">Summary</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="summary">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Summary</h2>
+            <div class="summary-content fade-in">
+                <p>Bioinformatics Research Specialist with a strong background in genomic data analysis, machine learning and computational biology. Proven expertise in analyzing large-scale biological datasets, including WGBS DNA methylation analysis and next-generation sequencing (NGS), using tools like Methyelkit, BLAST, and Edger. Skilled in developing bioinformatics pipelines, applying Bayesian Neural Networks (BNNs) for data classification and optimizing machine learning models for biological data. Strong programming skills in Python, R, and Perl, with a commitment to advancing the field through innovative computational methods and collaborative research.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Work Experience</h2>
+            
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Graduate Research Assistant</div>
+                        <div class="experience-company">Prairie View A&M University, Prairie View, TX</div>
+                    </div>
+                    <div class="experience-date">Sep 2023 – Present</div>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Applied Methyelkit and Bayesian Neural Networks (BNNs) to analyze WGBS DNA methylation data, identifying species-specific epigenetic patterns that led to analysis Genome data fast and accurately than conventional bio-tools</li>
+                        <li>Developed and optimized bioinformatics pipelines, increasing data processing speed through workflow improvements</li>
+                        <li>Conducted data preprocessing and statistical modeling, which contributed to the successful submission of 1 research papers to peer-reviewed journals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Sr. Assistant IT Officer</div>
+                        <div class="experience-company">Aayan Plastic Industry, Dhaka, Bangladesh</div>
+                    </div>
+                    <div class="experience-date">Jul 2021 – Dec 2022</div>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Led IT strategy development, resulting in the implementation of a new IT infrastructure that improved system performance and reduced downtime</li>
+                        <li>Optimized network administration, leading to a reduction in security breaches and enhanced overall company cybersecurity</li>
+                        <li>Implemented a database optimization strategy, improving data retrieval time and enhancing the efficiency of operational processes</li>
+                        <li>Conducted staff training on IT best practices, resulting in a reduction in internal IT support requests and increased productivity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item fade-in">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Machine Learning Intern</div>
+                        <div class="experience-company">Silicon Orchard Software Solution, Dhaka, Bangladesh</div>
+                    </div>
+                    <div class="experience-date">Oct 2019 – Dec 2021</div>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Developed and optimized machine learning algorithms for predictive analytics, achieving an increase in model accuracy with large dataset</li>
+                        <li>Collaborated with a team of 5 developers, successfully completing 3 machine learning projects, leading to the company securing two long-term client contracts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">Education</h2>
+            
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div>
+                        <div class="education-title">Master's in Computer Science</div>
+                        <div class="education-institution">Prairie View A&M University, Prairie View, TX</div>
+                        <div class="education-grade">GPA: 4.00</div>
+                    </div>
+                    <div class="education-date">Expected May 2025</div>
+                </div>
+            </div>
+
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div>
+                        <div class="education-title">Master's in Information Technology</div>
+                        <div class="education-institution">Jahangirnagar University, Dhaka, Bangladesh</div>
+                        <div class="education-grade">CGPA: 3.60</div>
+                    </div>
+                    <div class="education-date">Jan 2023</div>
+                </div>
+            </div>
+
+            <div class="education-item fade-in">
+                <div class="education-header">
+                    <div>
+                        <div class="education-title">Bachelor of Science in Computer Science and Engineering</div>
+                        <div class="education-institution">Daffodil International University, Dhaka, Bangladesh</div>
+                        <div class="education-grade">CGPA: 3.48</div>
+                    </div>
+                    <div class="education-date">Jan 2019</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Perl</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">SciKit Learn</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Model Training</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Data Analysis & Visualization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Statistical Modeling</span>
+                        <span class="skill-tag">Data Visualization</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Bioinformatics Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Methyelkit</span>
+                        <span class="skill-tag">Edger</span>
+                        <span class="skill-tag">BLAST</span>
+                        <span class="skill-tag">Bioconductor</span>
+                        <span class="skill-tag">UCSC Genome Browser</span>
+                        <span class="skill-tag">NCBI Databases</span>
+                        <span class="skill-tag">NGS</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Computational Biology</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Genomic Data Processing</span>
+                        <span class="skill-tag">Data Pipelines</span>
+                        <span class="skill-tag">Sequence Analysis</span>
+                        <span class="skill-tag">Biological Data Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Molecular Biology</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DNA/RNA Sequencing</span>
+                        <span class="skill-tag">PCR</span>
+                        <span class="skill-tag">Gene Expression Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Databases & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL Query Optimization</span>
+                        <span class="skill-tag">Data Preprocessing</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Research Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item fade-in">
+                    <h3>WGBS DNA Methylation Data Analysis for Species-Specific Epigenetic Pattern Identification</h3>
+                    <p><strong>Date:</strong> Jun 2024</p>
+                    <p>Developed a computational pipeline to analyze WGBS DNA methylation data using Methyelkit to identify species-specific epigenetic patterns in seal genomes.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Methyelkit</span>
+                        <span class="tech-tag">WGBS</span>
+                        <span class="tech-tag">DNA Methylation</span>
+                        <span class="tech-tag">Genomics</span>
+                        <span class="tech-tag">R</span>
+                    </div>
+                </div>
+
+                <div class="project-item fade-in">
+                    <h3>Fake Review Detection (Facebook, Amazon, Yelp, Google)</h3>
+                    <p><strong>Date:</strong> Dec 2020</p>
+                    <p>Utilized Selenium for web scraping to extract data and applied sentiment analysis to detect fraudulent reviews. Leveraged machine learning techniques (classification models) to enhance authenticity detection.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Web Scraping</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Classification</span>
+                    </div>
+                </div>
+
+                <div class="project-item fade-in">
+                    <h3>Ghs Smart</h3>
+                    <p><strong>Date:</strong> Jan 2021</p>
+                    <p>Designed and implemented an advanced search system for a company database to retrieve employee data. Demonstrated skills in database management, search algorithms, and sentiment analysis.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Database Management</span>
+                        <span class="tech-tag">Search Algorithms</span>
+                        <span class="tech-tag">Data Retrieval</span>
+                        <span class="tech-tag">System Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title fade-in">Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-item fade-in">
+                    <h3>Identifying Underlying Phenotypic Characteristics of Seal DNA Methylation Data and Distinguishing Between Seal Species Using Machine Learning</h3>
+                    <p><strong>Status:</strong> Submitted</p>
+                    <p>Research on utilizing machine learning techniques to identify phenotypic characteristics and distinguish between seal species using DNA methylation data.</p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Bangla Sign Language Interpreter with Deep Learning and Real-Time Streaming</h3>
+                    <p><strong>Published:</strong> IEEE (2019)</p>
+                    <p>Developed a deep learning-based system for interpreting Bangla sign language with real-time streaming capabilities.</p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Advanced Retinal Image Segmentation using U-Net Architecture</h3>
+                    <p><strong>Published:</strong> IEEE (2024)</p>
+                    <p>Research on advanced retinal image segmentation techniques using U-Net architecture for medical image analysis.</p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>BiLSTM Models on German Patient Reviews</h3>
+                    <p><strong>Published:</strong> IEEE (2024)</p>
+                    <p>Application of BiLSTM models for analyzing German patient reviews in healthcare settings.</p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Deep Learning Analysis of COVID-19 Lung Infections in CT Scans</h3>
+                    <p><strong>Published:</strong> IEEE (2024)</p>
+                    <p>Deep learning approach for analyzing COVID-19 lung infections using CT scan images.</p>
+                </div>
+
+                <div class="publication-item fade-in">
+                    <h3>Evaluating Pretrained Deep Learning Models for Image Ensemble Adversarial Attacks</h3>
+                    <p><strong>Published:</strong> IEEE ACCESS (2025)</p>
+                    <p>Comprehensive evaluation of pretrained deep learning models against ensemble adversarial attacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title fade-in">Achievements</h2>
+            <div class="achievement-item fade-in">
+                <h3>Full Scholarship at Daffodil International University</h3>
+                <p>Awarded full scholarship for academic excellence during undergraduate studies in Computer Science and Engineering.</p>
+            </div>
+            <div class="achievement-item fade-in">
+                <h3>2nd Place in Math Olympiads at Division Level, Bangladesh</h3>
+                <p>Achieved second place in mathematics olympiad competition at the division level, demonstrating strong analytical and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/prosenjit-roy" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/prosenjit-roy" target="_blank" class="footer-link">GitHub</a>
+                    <a href="https://scholar.google.com/citations?user=prosenjit-roy" target="_blank" class="footer-link">Google Scholar</a>
+                    <a href="https://orcid.org/prosenjit-roy" target="_blank" class="footer-link">ORCID</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Prosenjit Roy. All rights reserved.</p>
+                    <p>Bioinformatics Research Specialist & Machine Learning Expert</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.experience-item, .education-item, .project-item, .publication-item, .skill-category, .achievement-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 12px 35px rgba(0, 0, 0, 0.5)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.background = 'rgba(255,255,255,0.15)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
